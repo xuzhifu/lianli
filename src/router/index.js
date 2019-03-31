@@ -4,29 +4,37 @@ import Router from 'vue-router'
 Vue.use( Router )
 
 const index = () => import('@/pages/index')
-const type = () => import('@/pages/type')
-const wedding = () => import('@/pages/wedding')
+const introduction = () => import('@/pages/introduction')
+const contact = () => import('@/pages/contact')
+const loading = () => import('@/pages/loading')
 
 let routes = [
     {
         path: '/',
+        component: loading,
+        redirect:null,
+        meta:null,
+        children:null,
+    },
+    {
+        path: '/index',
         component: index,
         redirect:null,
-        meta:null,
+        meta:'首页',
         children:null,
     },
     {
-        path: '/type',
-        component: type,
+        path: '/contact',
+        component: contact,
         redirect:null,
-        meta:null,
+        meta:'联系',
         children:null,
     },
     {
-        path: '/wedding',
-        component: wedding,
+        path: '/introduction',
+        component: introduction,
         redirect:null,
-        meta:null,
+        meta:'莲鲤',
         children:null,
     },
 ]
