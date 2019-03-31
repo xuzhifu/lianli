@@ -361,6 +361,8 @@ a:active{color:#666;}
         left:50%;
         transform:translate(-50%,-50%);
         width:800px;
+        height: 550px;
+        overflow: auto;
         background:#fff;
         padding:35px;
         .close{
