@@ -1,10 +1,11 @@
-@font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1553953524244'); /* IE9 */
-  src: url('iconfont.eot?t=1553953524244#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALsAAsAAAAABtwAAAKfAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqBIIEbATYCJAMQCwoABCAFhG0HQBsFBsgusG3YkyKxLBwbD5tSBQjkhHh4WvvfuTOz+80MqCaNRFINhQRVrCQrCSIhehUN9f3vmqbAcsKkI7WyG7JCe/iTozb3chmSYhRyahbIdUKudmoOGqBRHl8P7J7/6wckJUE+zzHTJdBA8ttsblUWHc8jAQc2HVB0kW0iJ+Y36C5icvK3thNoNamB71jv8BiKKkC/QNwzqYKillNRskizUE9MLeKlSnN6lMqQF/z38Uc+oiRVBoaeudGjo/bvz99pVhorzlECFyGcXSFjHVKIW5PBKwIiowW0tg46AGnWLHFVXbL0SzUf5sF/eYQkEzWQ3g72RaHM92fMIfiR5JD4kU6T4Ycom2V4ErITU8djkhA1fFaPp09QGCPzzaC3UAonK28eD5LTuyF6tvX2Yb/vf/r+HstBs14nV1DfXHvh+gqMnnt6cv9BqVSpt/5rb+9/mEi/aVcFuaLY/D5JgxoLtPO/OtCBfAhOv3r4INH815wo4OPH0W9gbzwH2aZA3iLYLPA/wcay0oqAqpRajPmdueg57E9ohRp8LUqvyhXKgc1+QrMlyJA0mUDWbJ5YqOuotNmHWrODaLWmb3abPlxAlBas2gwQut0j6fQOWbdPYqF+oTLoB7XuCKDV2ahass1imPEuDooAHauz2NRYiSCNiIvMEaCTjsJNEadPAPdMD86ls26kD0rArxjhTdG8EAQTzoq4N9gNHIdhlzMLNJE2hHAbMxky9aG0xooo7igOKASgw1SzMJOGKSG0thAffH8EoCY5FHwha8M9AXAes3EsJy27gdgnL23K+pVbPFOoPEEgMIJjirDeoBNwOBjMne5kARohzTjgdzXKwGpkqzz9vLLogbwsD3BuiRQ5SlSqy5yz6YgOQjEdL6gqmo0QAA==') format('woff2'),
-  url('iconfont.woff?t=1553953524244') format('woff'),
-  url('iconfont.ttf?t=1553953524244') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-  url('iconfont.svg?t=1553953524244#iconfont') format('svg'); /* iOS 4.1- */
+@font-face {
+    font-family: 'iconfont';  /* project id 1117435 */
+    src: url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.eot');
+    src: url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1117435_9boa1rco6ph.svg#iconfont') format('svg');
 }
 
 .iconfont {

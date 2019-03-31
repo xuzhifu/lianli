@@ -10,7 +10,7 @@
             <a>XXXXXXXXXXXXXXX</a>
         </div>
 
-        <el-carousel :interval="400000" type="card" arrow="always" trigger="click">
+        <el-carousel :interval="interval" type="card" arrow="always" trigger="click">
             <el-carousel-item>
                 <div class="cell-thumb" style="background-image:url(http://wakakay.com/images/swipe.png)"></div>
             </el-carousel-item>
@@ -21,6 +21,15 @@
                 <div class="cell-thumb" style="background-image:url(http://wakakay.com/images/swipe.png)"></div>
             </el-carousel-item>
         </el-carousel>
+
+        <div class="ui-swipe" :auto="interval">
+            <mt-swipe>
+                <mt-swipe-item><div class="cell-thumb" style="background-image:url(http://wakakay.com/images/swipe.png)"></div></mt-swipe-item>
+                <mt-swipe-item><div class="cell-thumb" style="background-image:url(http://wakakay.com/images/swipe.png)"></div></mt-swipe-item>
+                <mt-swipe-item><div class="cell-thumb" style="background-image:url(http://wakakay.com/images/swipe.png)"></div></mt-swipe-item>
+            </mt-swipe>
+        </div>
+
 
         <div class="ui-detail">
             <div class="ui-news">
@@ -74,6 +83,7 @@
 
         data() {
             return {
+                interval: 5000, // 轮番图自动播播放的间隔时间
                 activeName: '2',
                 productList: [
                     {title: '上品优喜台州星光耀广场店', thumb: 'http://wakakay.com/images/product-01.png'},
