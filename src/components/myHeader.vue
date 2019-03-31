@@ -40,7 +40,7 @@
             }
         },
         mounted(){
-            console.log(this.$route.name);
+
         }
     }
 </script>
