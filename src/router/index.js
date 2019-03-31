@@ -14,33 +14,33 @@ const loading = r => require.ensure([], () => r(require('@/pages/loading')), 'lo
 let routes = [
     {
         path: '/index', // 首页
-        name: '首页',
-        meta: '',
+        name: '',
+        meta: {},
         component: index
     },
     {
         path: '/detail', // 首页
-        name: '详情',
-        meta: '',
+        name: '',
+        meta: {},
         component: detail
     },
     {
         path: '/contact',
         component: contact,
-        redirect:null,
-        meta:'联系',
+        name:'联系',
+        meta: {},
     },
     {
         path: '/introduction',
         component: introduction,
-        redirect:null,
-        meta:'莲鲤',
+        name:'莲鲤',
+        meta: {},
     },
     {
-        path: '/loading',
+        path: '/',
         component: loading,
-        redirect:null,
-        meta:'莲鲤',
+        name:'',
+        meta: {},
     },
 ]
 

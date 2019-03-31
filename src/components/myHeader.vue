@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="fixed-mob"></div>
-        <div class="menu-desc" v-if="$route.meta!='首页'"><span>{{$route.meta}}</span></div>
+        <div class="menu-desc" v-if="$route.name!='首页'"><span>{{$route.name}}</span></div>
     </div>
 </template>
 
@@ -39,6 +39,9 @@
                 showLogo:true,
             }
         },
+        mounted(){
+            console.log(this.$route.name);
+        }
     }
 </script>
 

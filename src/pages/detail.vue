@@ -1,11 +1,8 @@
-<style>
-
-</style>
 
 <template>
     <div class="module-detail">
         <div class="ui-breadcrumb" flex="cross:center">
-            <a class="cell-back"><i class="icon-back"></i>返回</a>
+            <a class="cell-back" @click="$router.go(-1)"><i class="icon-back"></i>返回</a>
             <span>项目 <i class="icon-details"></i></span>
             <a>XXXXXXXXXXXXXXX</a>
         </div>

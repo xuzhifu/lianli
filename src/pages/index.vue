@@ -1,6 +1,3 @@
-<style>
-
-</style>
 
 <template>
     <div class="module-main">
@@ -24,7 +21,7 @@
                 <div>
                     <h3>度心设计师严选定制装饰品牌体验店</h3>
                     <P>义乌</P>
-                    <p><router-link to="/">探索更多</router-link></p>
+                    <p><router-link to="/detail">探索更多</router-link></p>
                 </div>
             </div>
         </div>
@@ -33,7 +30,7 @@
                 <div>
                     <h3>度心设计师严选定制装饰品牌体验店</h3>
                     <P>义乌</P>
-                    <p><router-link to="/">探索更多</router-link></p>
+                    <p><router-link to="/detail">探索更多</router-link></p>
                 </div>
             </div>
         </div>
@@ -42,7 +39,7 @@
                 <div>
                     <h3>度心设计师严选定制装饰品牌体验店</h3>
                     <P>义乌</P>
-                    <p><router-link to="/">探索更多</router-link></p>
+                    <p><router-link to="/detail">探索更多</router-link></p>
                 </div>
             </div>
         </div>
