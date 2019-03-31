@@ -4,6 +4,7 @@ import router from './router/index'
 import {Collapse, CollapseItem} from 'element-ui';
 import { Swipe, SwipeItem } from 'mint-ui';
 
+import 'element-ui/lib/theme-chalk/icon.css';
 import 'element-ui/lib/theme-chalk/collapse.css';
 import 'element-ui/lib/theme-chalk/collapse-item.css';
 import 'element-ui/lib/theme-chalk/carousel.css';
