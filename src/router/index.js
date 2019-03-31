@@ -3,17 +3,24 @@ import Router from 'vue-router'
 
 Vue.use( Router )
 
-const index = () => import('@/pages/index')
+
+const index = r => require.ensure([], () => r(require('@/pages/index')), 'index') // 首页
+const detail = r => require.ensure([], () => r(require('@/pages/detail')), 'detail')
 const type = () => import('@/pages/type')
 const wedding = () => import('@/pages/wedding')
 
 let routes = [
     {
-        path: '/',
-        component: index,
-        redirect:null,
-        meta:null,
-        children:null,
+        path: '/index', // 首页
+        name: '首页',
+        meta: {},
+        component: index
+    },
+    {
+        path: '/detail', // 首页
+        name: '详情',
+        meta: {},
+        component: detail
     },
     {
         path: '/type',
@@ -36,7 +43,6 @@ let router = new Router( {
 } )
 
 router.beforeEach(function (to, from, next) {
-    window.scrollTo(0, 0)
     next()
 })
 
