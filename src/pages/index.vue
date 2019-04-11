@@ -1,18 +1,20 @@
 
 <template>
     <div class="module-main">
-        <div class="ui-nav" flex="main:justify show:visible">
-            <div class="ui-title">项目</div>
-            <div class="ui-select-list">
-                <p flex="cross:center" @click="getShowSelect">选择年份</p>
-                <ul v-show="isShowSelect">
-                    <li flex="main:justify cross:center"
-                        :class="{'is-select': item.isSelected}"
-                        v-for="item in yearList" :key="item.id"
-                        @click="getSelectYear(item)">
-                        <span>{{item.value}}</span> <span></span>
-                    </li>
-                </ul>
+        <div class="ui-nav">
+            <div class="ui-nav-box" flex="main:justify show:visible">
+                <div class="ui-title">项目</div>
+                <div class="ui-select-list">
+                    <p flex="main:justify cross:center" @click="getShowSelect"><span>选择年份</span><i class="icon-arrow"></i></p>
+                    <ul v-show="isShowSelect">
+                        <li flex="main:justify cross:center"
+                            :class="{'is-select': item.isSelected}"
+                            v-for="item in yearList" :key="item.id"
+                            @click="getSelectYear(item)">
+                            <span>{{item.value}}</span> <span></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
