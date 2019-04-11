@@ -8,12 +8,11 @@ const detail = r => require.ensure([], () => r(require('@/pages/detail')), 'deta
 
 const introduction = r => require.ensure([], () => r(require('@/pages/introduction')), 'introduction')
 const contact = r => require.ensure([], () => r(require('@/pages/contact')), 'contact')
-const loading = r => require.ensure([], () => r(require('@/pages/loading')), 'loading')
 
 
 let routes = [
     {
-        path: '/index', // 首页
+        path: '/', // 首页
         name: '',
         meta: {},
         component: index
@@ -34,12 +33,6 @@ let routes = [
         path: '/introduction',
         component: introduction,
         name:'莲鲤',
-        meta: {},
-    },
-    {
-        path: '/',
-        component: loading,
-        name:'',
         meta: {},
     },
 ]

@@ -58,6 +58,11 @@
                 </li>
             </ul>
         </div>
+        <div :class="['loading',{'fadeOut':fadeOut},{'show':show}]">
+            <img class="loading-logo" src="../assets/img/logo.png"/>
+            <img class="loading-logo2" src="../assets/img/logo2.png"/>
+            <p>&nbsp;莲鲤文化传播有限公司</p>
+        </div>
     </div>
 </template>
 
@@ -65,6 +70,8 @@
     export default {
         data () {
             return {
+                show:false,
+                fadeOut:false,
                 isShowSelect: false,
                 yearList: [
                     {value: 2019, isSelected: true},
@@ -94,7 +101,17 @@
                 ]
             }
         },
-
+        created(){
+            if(!window.sessionStorage.loading){
+                this.fadeOut=true;
+                window.sessionStorage.setItem('loading', true)
+                setTimeout(()=>{
+                    this.show=true;
+                },3000)
+            }else{
+                this.show=true;
+            }
+        },
         methods: {
             getShowSelect(type) {
                 let self = this

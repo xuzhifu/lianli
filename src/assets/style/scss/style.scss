@@ -1005,10 +1005,13 @@ a:active{color:#666;}
 
 @-webkit-keyframes fadeOut{
     0%{opacity:1;}
-    100%{opacity:.98;}
+    50%{opacity:1;}
+    100%{opacity:0;}
 }
 @keyframes fadeOut{
     0%{opacity:1;}
-    100%{opacity:.98;}
+    50%{opacity:1;}
+    100%{opacity:0;}
 }
-//.fadeOut { animation: fadeOut 3s forwards; -webkit-animation: fadeOut 3s forwards; }
+.fadeOut { animation: fadeOut 3s forwards; -webkit-animation: fadeOut 3s forwards; }
+.show{display:none}
