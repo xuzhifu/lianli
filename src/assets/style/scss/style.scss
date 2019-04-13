@@ -418,6 +418,7 @@ a:active{color:#666;}
         left:50%;
         transform:translate(-50%,0);
         text-align: center;
+        width:54px;
     }
     .loading-logo2{
         position: absolute;
@@ -1033,5 +1034,86 @@ a:active{color:#666;}
     50%{opacity:1;}
     100%{opacity:0;}
 }
-.fadeOut { animation: fadeOut 3s forwards; -webkit-animation: fadeOut 3s forwards; }
+.fadeOut { animation: fadeOut 10s forwards; -webkit-animation: fadeOut 10s forwards; }
 .show{display:none}
+
+
+@-webkit-keyframes fadeInOne{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes fadeInOne{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+.fadeInOne{animation: fadeInOne 1s forwards; -webkit-animation: fadeInOne 1s forwards;}
+
+
+
+@-webkit-keyframes fadeInThree {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeInThree {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.fadeInThree {
+    animation: fadeInThree 1s 4s both; -webkit-animation: fadeInThree 1s 4s both;
+}
+
+.fensug {
+    width: 220px;
+    height: 220px;
+    margin: 100px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.fensug .wavenum {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.waven {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #393631;
+    overflow: hidden;
+    position: relative;
+    background:url("../../img/logo-wave.png")
+}
+.wave {
+    width: 408px;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    animation: move_wave 1s linear infinite;
+    -webkit-animation: move_wave 1s linear infinite;
+    background:url("../../img/wave.png") no-repeat;
+}
+@-webkit-keyframes move_wave {
+    0% {-webkit-transform: translateX(0)}
+    50% {-webkit-transform: translateX(-25%)}
+    100% {-webkit-transform: translateX(-50%)}
+}
+@keyframes move_wave {
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-25%)}
+    100% {transform: translateX(-50%)}
+}

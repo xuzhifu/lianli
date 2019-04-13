@@ -60,7 +60,7 @@
     }
 
     //标注点数组
-    var markerArr = [{title:"金展珠宝广场2407",content:"深圳市罗湖区水贝一路",point:"114.134111|22.579434",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"水贝一路金展珠宝广场2407",content:"深圳市罗湖区",point:"114.134111|22.579434",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
     ];
     //创建marker
     function addMarker(){

@@ -5,7 +5,7 @@
             <div class="ui-nav-box" flex="main:justify show:visible">
                 <div class="ui-title">项目</div>
                 <div class="ui-select-list">
-                    <p flex="main:justify cross:center" @click="getShowSelect"><span>选择年份</span><i class="icon-arrow"></i></p>
+                    <p flex="main:justify cross:center" @click="getShowSelect"><span>选择年份</span></p>
                     <ul v-show="isShowSelect">
                         <li flex="main:justify cross:center"
                             :class="{'is-select': item.isSelected}"
@@ -61,9 +61,16 @@
             </ul>
         </div>
         <div :class="['loading',{'fadeOut':fadeOut},{'show':show}]">
-            <img class="loading-logo" src="../assets/img/logo.png"/>
-            <img class="loading-logo2" src="../assets/img/logo2.png"/>
-            <p>&nbsp;莲鲤文化传播有限公司</p>
+            <img class="loading-logo fadeInOne" src="../assets/img/logo.png"/>
+            <div class="loading-logo2">
+                <div class="fensug">
+                    <div class="wavenum "></div>
+                    <div class="waven">
+                        <div class="wave">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <p class="fadeInThree">&nbsp;莲鲤文化传播有限公司</p>
         </div>
     </div>
 </template>
@@ -109,9 +116,21 @@
                 window.sessionStorage.setItem('loading', true)
                 setTimeout(()=>{
                     this.show=true;
-                },3000)
+                },5000)
             }else{
                 this.show=true;
+            }
+        },
+        mounted(){
+            let waveHeight = 130;
+            let waveNum = 0;
+            waves();
+            function waves() {
+                if (waveHeight > waveNum) {
+                    document.querySelectorAll(".wave")[0].style.height=waveHeight + "%";
+                    waveHeight--;
+                }
+                setTimeout(function() { waves() }, 30);
             }
         },
         methods: {
