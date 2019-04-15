@@ -64,7 +64,7 @@
             <img class="loading-logo fadeInOne" src="../assets/img/logo.png"/>
             <div class="loading-logo2">
                 <div class="fensug">
-                    <div class="wavenum "></div>
+                    <div class="wavenum"></div>
                     <div class="waven">
                         <div class="wave">&nbsp;</div>
                     </div>
@@ -116,7 +116,7 @@
                 window.sessionStorage.setItem('loading', true)
                 setTimeout(()=>{
                     this.show=true;
-                },5000)
+                },3000)
             }else{
                 this.show=true;
             }
@@ -130,7 +130,7 @@
                     document.querySelectorAll(".wave")[0].style.height=waveHeight + "%";
                     waveHeight--;
                 }
-                setTimeout(function() { waves() }, 30);
+                setTimeout(function() { waves() }, 15);
             }
         },
         methods: {
