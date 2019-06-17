@@ -137,7 +137,7 @@ a:active{color:#666;}
     div, li{box-sizing:border-box;}
     .ui-swipe{display:none;}
     .el-carousel{
-        width:100%;height:550px;position:relative;background-color:#393631;
+        width:100%;position:relative;background-color:#393631;
         .el-carousel__container{height:100%;}
         el-carousel__item{padding:0 5px;}
         .el-carousel__item--card.is-active{border-left:10px solid #393631;border-right:10px solid #393631;}
@@ -448,7 +448,7 @@ a:active{color:#666;}
     }
     .module-detail{
         .el-carousel{
-            width:100%;height:400px;
+            width:100%;
         }
         .ui-detail{padding:40px 50px;}
     }
@@ -460,7 +460,7 @@ a:active{color:#666;}
 @media only screen and (max-width: 1024px){
     .module-detail{
         .el-carousel{
-            width:100%;height:300px;
+            width:100%;
         }
     }
     .contact-box {
