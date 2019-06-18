@@ -135,7 +135,6 @@ a:active{color:#666;}
 /* 详情 */
 .module-detail{
     div, li{box-sizing:border-box;}
-    .ui-swipe{display:none;}
     .el-carousel{
         width:100%;position:relative;background-color:#393631;
         .el-carousel__container{height:100%;}
@@ -502,9 +501,8 @@ a:active{color:#666;}
         }
     }
     .module-detail{
-        .el-carousel{display:none;}
         .ui-swipe{
-            height:230px;clear:both;display:block;
+            height:230px;clear:both;
             .mint-swipe{overflow:hidden;position:relative;height:100%;}
             .mint-swipe-items-wrap{position:relative;overflow:hidden;height:100%;}
             .mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);transform:translateX(-100%);width:100%;height:100%;display:none}.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none;}
@@ -699,9 +697,8 @@ a:active{color:#666;}
         }
     }
     .module-detail{
-        .el-carousel{display:none;}
         .ui-swipe{
-            height:230px;clear:both;display:block;
+            height:230px;clear:both;
             .mint-swipe{overflow:hidden;position:relative;height:100%;}
             .mint-swipe-items-wrap{position:relative;overflow:hidden;height:100%;}
             .mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);transform:translateX(-100%);width:100%;height:100%;display:none}.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none;}
@@ -927,9 +924,8 @@ a:active{color:#666;}
     .module-detail{
         .ui-detail{
             padding:0;
-            .el-carousel{display:none;}
             .ui-swipe{
-                height:230px;clear:both;display:block;
+                height:230px;clear:both;
                 .mint-swipe{overflow:hidden;position:relative;height:100%;}
                 .mint-swipe-items-wrap{position:relative;overflow:hidden;height:100%;}
                 .mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);transform:translateX(-100%);width:100%;height:100%;display:none}.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none;}

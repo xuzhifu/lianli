@@ -7,20 +7,21 @@
             <a>XXXXXXXXXXXXXXX</a>
         </div>
 
-        <el-carousel :height="swipeHeight" :interval="interval" type="card" arrow="always"  trigger="click">
+        <el-carousel v-if="!isMobile()"
+                     :height="swipeHeight" :interval="interval" type="card" arrow="always"  trigger="click">
             <el-carousel-item v-for="(item, index) in swipeList" :key="index">
                 <div class="cell-thumb" :style="'background-image:url('+ item.url +')'"></div>
             </el-carousel-item>
         </el-carousel>
 
-        <div class="ui-swipe" :style="'height:'+swipeHeight" :auto="interval">
+        <div class="ui-swipe" v-if="isMobile()"
+             :style="'height:'+swipeHeight" :auto="interval">
             <mt-swipe>
                 <mt-swipe-item v-for="(item, index) in swipeList" :key="index">
                     <div class="cell-thumb" :style="'background-image:url('+ item.url +')'"></div>
                 </mt-swipe-item>
             </mt-swipe>
         </div>
-
 
         <div class="ui-detail">
             <div class="ui-news">
@@ -74,19 +75,12 @@
 
         data() {
             return {
-                isPc: () => {
-                    let userAgentInfo = navigator.userAgent;
-                    let Agents = ["Android", "iPhone",
-                        "SymbianOS", "Windows Phone",
-                        "iPad", "iPod"];
-                    let flag = true;
-                    for (var v = 0; v < Agents.length; v++) {
-                        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                            flag = false;
-                            break;
-                        }
+                navi: null,
+                isMobile: () => {
+                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                        return true
                     }
-                    return flag;
+                    return false
                 },
                 interval: 5000, // 轮番图自动播播放的间隔时间
                 activeName: '2',
@@ -125,20 +119,21 @@
                     image.src = img.url
                     image.onload = (info) => {
                         imagesInfo.push({
-                            width: info.path[0].width,
-                            height: info.path[0].height
+                            width: info.target ? info.target.width : info.path[0].width,
+                            height:  info.target ? info.target.height :info.path[0].height
                         })
+
                         count--
                         if(!count) {
                             let max = _.max(imagesInfo, (item) => {
                                 return item.width;
                             })
 
-                            if (!self.isPc()) {
-                                self.swipeHeight = Math.ceil((window.innerWidth / max.width) * max.height) + 'px'
-                            } else {
+                            if (self.isMobile()) {
                                 self.swipeHeight = Math.ceil((window.innerWidth / 2 / max.width) * max.height) + 'px'
+                                return
                             }
+                            self.swipeHeight = Math.ceil((window.innerWidth / max.width) * max.height) + 'px'
                         }
                     }
                 }
